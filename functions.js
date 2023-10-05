@@ -9,20 +9,12 @@ function list(clients) {
   
     return listItems.join('');
   }
-  //Order function
 
-  function order(clients, property) {
-    clients.sort((a, b) => {
-      if (a[property] < b[property]) {
-        return -1;
-      } else if (a[property] > b[property]) {
-        return 1;
+     // Order function
+     function order(clients, property) {
+        return clients.slice().sort((a, b) => a[property] - b[property]);
       }
-      return 0;
-    });
-  
-    return clients;
-  }
+
   
   // Total function
   function total(clients) {
@@ -44,4 +36,7 @@ function list(clients) {
     return results;
   }
   
+  
+
+ 
   
